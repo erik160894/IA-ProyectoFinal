@@ -23,6 +23,8 @@ def run(args):
                                  db=args.db_name, cursorclass=pymysql.cursors.DictCursor)
 
     sql = select_query.format(table=args.db_table)
+    if not args.multi_tag:
+        sql += " and tag not like '%,%'"
 
     with connection.cursor() as cursor:
         with open(args.out_file, 'w') as f:
@@ -41,6 +43,7 @@ def main():
     parser.add_argument('--db_pass', type=str, default='hola123', help='Password of the user')
     parser.add_argument('--db_table', type=str, default='dataset', help='Table od the db where data will be stored')
     parser.add_argument('--out_file', '-o', type=str, default='tags.csv', help='Output file name')
+    parser.add_argument('--multi_tag', '-mt', action='store_true', default=False)
 
     args = parser.parse_args()
     run(args)
