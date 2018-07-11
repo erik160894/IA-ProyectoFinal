@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link type="text/css" rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <script src="assets/js/vis.min.js"></script>
+    <link type="text/css" rel="stylesheet" href="assets/css/vis.min.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+
+    <title>Audio Dataset tagger</title>
+</head>
+<body>
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-3 col-sm-12 border border-info">
+            <div class="form-group">
+                <label for="tagger-name-input">Tagger</label>
+                <input id="tagger-name-input" type="text" class="form-control form-control-sm" placeholder="Name">
+                <small class="form-text text-muted">The name is required</small>
+            </div>
+            <div class="form-group">
+                <a class="btn btn-info" href="/progress">Check Progress</a>
+            </div>
+        </div>
+        <div class="col-md-9 col-sm-12 border border-primary">
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="form-group form-inline">
+                        <label for="dataSet-start-date">Start Date: </label>
+                        <input id="dataSet-start-date" type="datetime-local" class="form-control">
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <button id="dataSet-get-first-button" class="btn btn-primary">Get the first</button>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-4 col-sm-12">
+                    <div class="form-group form-inline">
+                        <label for="dataSet-id">ID: </label>
+                        <input id="dataSet-id" type="text" class="form-control form-control-sm" size="max" disabled>
+                    </div>
+                </div>
+                <div class="col-md-4 col-sm-12">
+                    <div class="form-group form-inline">
+                        <label for="dataSet-date">Date: </label>
+                        <input id="dataSet-date" type="text" class="form-control form-control-sm" disabled>
+                    </div>
+                </div>
+                <div class="col-md-4 col-sm-12">
+                    <div class="form-group form-inline">
+                        <label for="dataSet-tagger">Tagger: </label>
+                        <input id="dataSet-tagger" type="text" class="form-control form-control-sm" disabled>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-12">
+                    <audio id="dataSet-audio" controls></audio>
+                </div>
+            </div>
+
+            <div id="dataSet-journalists" class="row">
+            </div>
+
+            <div class="row">
+                <div class="col-md-3">
+                    <div class="form-group">
+                        <button id="btn-save-id" type="button" class="btn btn-success">Save</button>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="form-group">
+                        <button id="btn-next-id" type="button" class="btn btn-primary">Next</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div id="alert-div" class="alert alert-success alert-dismissible fade" role="alert">
+    <strong>Holy guacamole!</strong> You should check in on some of those fields below.
+    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+        <span aria-hidden="true">&times;</span>
+    </button>
+</div>
+
+<script src="assets/js/jquery-3.3.1.min.js"></script>
+<script src="assets/js/popper.min.js"></script>
+<script src="assets/js/bootstrap.min.js"></script>
+<script src="assets/js/index.js"></script>
+</body>
+</html>

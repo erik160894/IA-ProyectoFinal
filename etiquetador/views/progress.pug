@@ -1,0 +1,33 @@
+extends layout
+
+block head
+  title Progress
+
+block content
+  .container
+    .row
+      .col-md-12
+        h2 General
+      .col-md-12
+        label= 'Total: ' + stats.total
+        br
+        label= 'Avance: ' + stats.advance
+        br
+        label= 'Porcentaje: ' + Math.round(100*stats.advance/stats.total) + '%'
+    .row
+      .col-md-12
+        h2 Por etiquetador
+      .col-md-12
+        for tagger in aport
+          label= tagger.tagger + ': ' + tagger.cnt
+          br
+    .row
+      .col-md-12
+        h2 Por tag
+      .col-md-12
+        for tag in tag_count
+          label= tag.tag + ': ' + tag.cnt
+          br
+    .row
+      .col-md-12
+        a.btn.btn-warning(href='/') Regresar
