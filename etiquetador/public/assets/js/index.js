@@ -1,15 +1,10 @@
 $(document).ready(() => {
     let journalists = {
         j01: "Raúl Vargas",
-        j02: "Patricia del Rio",
-        j03: "Jose Maria Salcedo (Chema)",
-        j04: "Aldo Mariátegui",
-        j05: "Fernando Carvallo",
-        j06: "Mónica Delta",
-        j07: "Helmer Huerta",
-        j08: "Guillermo Rossinni",
-        j09: "Hector Felipe",
-        j10: "Daniel Kanashiro",
+        j02: "Mónica Delta",
+        j03: "Helmer Huerta",
+        j04: "Guillermo Rossinni",
+        j05: "Arnold Caballa",
         jxx: "Otro"
     };
 
